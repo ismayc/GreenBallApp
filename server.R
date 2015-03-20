@@ -1,7 +1,8 @@
 library(shiny)
 library(ggplot2)
 
-inputFile <- "gb200x100000.txt"
+#inputFile <- "gb200x100000.txt"
+inputFile <- "gb400x100K.txt"
 con  <- file(inputFile, open = "r")
 
 dataList <- list()
@@ -35,17 +36,8 @@ gbPlot <- function(n){
 #manipulate( gbPlot(n), n = slider(1,200))
 
 
-
-# Define server logic required to generate and plot a random distribution
 shinyServer(function(input, output) {
   
-  # Expression that generates a plot of the distribution. The expression
-  # is wrapped in a call to renderPlot to indicate that:
-  #
-  #  1) It is "reactive" and therefore should be automatically 
-  #     re-executed when inputs change
-  #  2) Its output type is a plot 
-  #
   output$distPlot <- renderPlot({
     gbPlot(input$draws)
   })
