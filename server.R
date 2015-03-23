@@ -2,7 +2,8 @@ library(shiny)
 library(ggplot2)
 
 #inputFile <- "gb200x100000.txt"
-inputFile <- "gb400x100K.txt"
+#inputFile <- "gb400x100K.txt"
+inputFile <- "gb573x100K.txt"
 con  <- file(inputFile, open = "r")
 
 dataList <- list()

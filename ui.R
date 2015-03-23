@@ -10,7 +10,7 @@ shinyUI(fluidPage(
     numericInput("draws", 
                  "Number of draws:", 
                  min = 1,
-                 max = 400, 
+                 max = 573, 
                  value = 1),
     plotOutput("distPlot"),
     uiOutput("mean"),
